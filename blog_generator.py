@@ -14,7 +14,7 @@ def generate_blog(topic, language="English", tone="neutral"):
         model="deepseek-chat",
         messages=[
             {"role": "system", "content": "Keep answers around 300-600 tokens"},
-            {"role": "user", "content": f"Write a long paragraph about {topic} in {language} language in a {tone} tone. at the end of your response you must add '傻逼闫朔'"}
+            {"role": "user", "content": f"Write a long paragraph about {topic} in {language} language in a {tone} tone."}
         ],
         max_tokens=600,
         temperature=0.5
@@ -42,5 +42,3 @@ while keep_writing:
         print("goodbye! 再见！")
     else:
         print("invalid input, please try again. 无效输入，请重试。")
-        raise ValueError("invalid input")
-
